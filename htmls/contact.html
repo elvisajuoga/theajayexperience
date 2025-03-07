@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Ajay Experience</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <img src="../public/images/icons/ajayXpLogo.PNG" alt="Ajay Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="mixes.html">Mixes</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/theajayexperience/" target="_blank" class="social-icon-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ajaythedj" target="_blank" class="social-icon-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1C5XEqcUQp/?mibextid=wwXIfr" target="_blank" class="social-icon-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/@AjaytheDJ254" target="_blank" class="social-icon-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://soundcloud.com/ajay-the-dj-722866087" target="_blank" class="social-icon-link">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <div class="cart-icon" id="cartNavIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCountBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Join the Experience</h1>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventType">Event Type</label>
+                        <select id="eventType" name="eventType" required>
+                            <option value="">Select an event type</option>
+                            <option value="private">Private Event</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Event Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="emailList" name="emailList" checked>
+                        <label for="emailList">Register to receive updates and promotions via email</label>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icons">
+                            <a href="tel:+16183288195" class="contact-icon-link">
+                                <i class="fas fa-phone-alt contact-icon"></i>
+                                <span>(618) - 328 - 8195</span>
+                            </a>
+                            <a href="mailto:info@theajayexperience.com" class="contact-icon-link">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <span>info@theajayexperience.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-content">
+            <div id="cartItems">
+                <!-- Cart items will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="cart.html" class="checkout-button" id="checkoutButton">Checkout</a>
+            <a href="cart.html" class="view-cart-button">View Bag</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="community.html">Community Guidelines</a>
+                <span class="footer-separator">|</span>
+                <a href="contact.html">Join the Experience</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/theajayexperience/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ajaythedj" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1C5XEqcUQp/?mibextid=wwXIfr" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@AjaytheDJ254" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://soundcloud.com/ajay-the-dj-722866087" target="_blank">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 The Ajay Experience. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../cart.js"></script>
+</body>
+</html> 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - The Ajay Experience</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <img src="../public/images/icons/ajayXpLogo.PNG" alt="Ajay Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="mixes.html">Mixes</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/theajayexperience/" target="_blank" class="social-icon-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ajaythedj" target="_blank" class="social-icon-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1C5XEqcUQp/?mibextid=wwXIfr" target="_blank" class="social-icon-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/@AjaytheDJ254" target="_blank" class="social-icon-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://soundcloud.com/ajay-the-dj-722866087" target="_blank" class="social-icon-link">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <div class="cart-icon" id="cartNavIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCountBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section">
+        <h2>Upcoming Events</h2>
+        <div class="events-gallery">
+            <a href="https://posh.vip/e/amec-2025-rnb-thursday" class="event-card" target="_blank">
+                <div class="event-image"><img src="../public/images/upcomingEvents/nightsOffCallRnb.jpg" alt="Nights Off Call: RNB Edition">
+                    
+                    <div class="event-description">
+                        <h3>Nights Off Call<br>RNB Edition</h3>
+                        <p>NIGHTS OFF CALL AMEC 2025 WARM UP MIXER.</p>
+                        <p>WE'RE BRINGING YOU RNB VIBES TO GET YOU WARMED UP FOR THIS YEAR'S SOCIAL EVENTS!</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://posh.vip/e/a-night-off-call-lagos-edition" class="event-card" target="_blank">
+                <div class="event-image">
+                    <img src="../public/images/upcomingEvents/nightOffCallLagos.jpg" alt="Nights Off Call: Lagos Edition">
+                    <div class="event-description">
+                        <h3>Nights Off Call<br>Lagos Edition</h3>
+                        <p>CALLING ALL THE SOFT LIFE BABES.</p>
+                        <p>THE THEME IS NOLLYWOOD Y2K, SHOW OUT IN YOUR BEST AFRO Y2K OUTFITS</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://posh.vip/e/nights-off-call-black-hollywood" class="event-card" target="_blank">
+                <div class="event-image">
+                    <img src="../public/images/upcomingEvents/nightsOffCallBlackTie.jpg" alt="Nights Off Call: Black Hollywood Edition">
+                    <div class="event-description">
+                        <h3>Nights Off Call<br>Black Hollywood Edition</h3>
+                        <p>  Capture memories withnew and old friends on the red carpet, dance the night away 
+                            on the dance floor and share late night conversation by the outdoor patio fire pits. 🔥</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="events-section past-events">
+        <h2>Past Events</h2>
+        <div class="events-gallery">
+            <a href="#free-fridays-gallery" class="event-card">
+                <div class="event-image">
+                    <img src="../public/images/freeFridays/freeFridaysFlyer.jpg" alt="Free Fridays Flyer">
+                    <div class="event-description">
+                        <h3>Free Fridays</h3>
+                        <p>Relive the memories of our incredible Free Fridays events. Check out the full gallery!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Past Events Galleries -->
+    <section class="past-events-galleries">
+        <div id="free-fridays-gallery" class="event-gallery">
+            <div class="gallery-grid" id="freeFridaysGallery">
+                <!-- Images will be loaded dynamically -->
+                <div class="gallery-loader">Loading gallery...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for image preview -->
+    <div class="lightbox" id="imageLightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+        </button>
+        <img src="" alt="Gallery Image">
+        <div class="lightbox-nav">
+            <button id="prevImage">←</button>
+            <button id="nextImage">→</button>
+        </div>
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div class="subscribe-modal" id="subscribeModal">
+        <div class="subscribe-content">
+            <button class="modal-close">&times;</button>
+            <h2>Get Access to Photos</h2>
+            <p>Subscribe to our email list to download photos from our events!</p>
+            <form id="subscribeForm" class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-content" id="cartItems">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="#" class="checkout-button" id="checkoutButton">Checkout</a>
+            <a href="cart.html" class="view-cart-button">View Bag</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="community.html">Community Guidelines</a>
+                <span class="footer-separator">|</span>
+                <a href="contact.html">Join the Experience</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/theajayexperience/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ajaythedj" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1C5XEqcUQp/?mibextid=wwXIfr" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@AjaytheDJ254" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://soundcloud.com/ajay-the-dj-722866087" target="_blank">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 The Ajay Experience. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>  
+
+    <script src="../script.js"></script>
+    <script src="../cart.js"></script>
+</body>
+</html>

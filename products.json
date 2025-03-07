@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "id": "bandana-001",
+      "name": "Classic Logo Bandana",
+      "description": "Premium quality bandana featuring The Ajay Experience logo. Perfect for events and showing your support.",
+      "price": 19.99,
+      "categories": ["bandanas", "featured"],
+      "variants": [
+        {
+          "color": "Purple & Gold",
+          "inventory": 50,
+          "sku": "BDN-PG-001"
+        },
+        {
+          "color": "Black & Gold",
+          "inventory": 50,
+          "sku": "BDN-BG-001"
+        }
+      ],
+      "images": [
+        "/public/images/merch/bandana.webp"
+      ]
+    },
+    {
+      "id": "tshirt-001",
+      "name": "The Ajay Experience T-Shirt",
+      "description": "Comfortable cotton T-shirt with The Ajay Experience logo. Great for casual wear and events.",
+      "price": 29.99,
+      "categories": ["apparel", "featured"],
+      "variants": [
+        {
+          "color": "Black",
+          "inventory": 40,
+          "sku": "TSH-BLK-001"
+        },
+        {
+          "color": "Purple",
+          "inventory": 35,
+          "sku": "TSH-PUR-001"
+        }
+      ],
+      "images": [
+        "/public/images/merch/bandana.webp"
+      ]
+    },
+    {
+      "id": "hoodie-001",
+      "name": "Premium Hoodie",
+      "description": "Stay warm with this high-quality hoodie featuring The Ajay Experience logo. Perfect for cooler weather.",
+      "price": 49.99,
+      "categories": ["apparel"],
+      "variants": [
+        {
+          "color": "Black",
+          "inventory": 25,
+          "sku": "HDI-BLK-001"
+        },
+        {
+          "color": "Purple",
+          "inventory": 20,
+          "sku": "HDI-PUR-001"
+        }
+      ],
+      "images": [
+        "/public/images/merch/bandana.webp"
+      ]
+    },
+    {
+      "id": "cap-001",
+      "name": "Snapback Cap",
+      "description": "Stylish snapback cap with The Ajay Experience logo. One size fits most.",
+      "price": 24.99,
+      "categories": ["accessories"],
+      "variants": [
+        {
+          "color": "Black & Gold",
+          "inventory": 30,
+          "sku": "CAP-BG-001"
+        },
+        {
+          "color": "Purple & Gold",
+          "inventory": 30,
+          "sku": "CAP-PG-001"
+        }
+      ],
+      "images": [
+        "/public/images/merch/bandana.webp"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "bandanas",
+      "name": "Bandanas",
+      "description": "Official The Ajay Experience bandanas"
+    },
+    {
+      "id": "apparel",
+      "name": "Apparel",
+      "description": "T-shirts, hoodies, and more"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "description": "Caps and other accessories"
+    },
+    {
+      "id": "featured",
+      "name": "Featured",
+      "description": "Featured merchandise"
+    }
+  ]
+} 

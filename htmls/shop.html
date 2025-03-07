@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise - The Ajay Experience</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <img src="../public/images/icons/ajayXpLogo.PNG" alt="Ajay Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="mixes.html">Mixes</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/theajayexperience/" target="_blank" class="social-icon-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ajaythedj" target="_blank" class="social-icon-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1C5XEqcUQp/?mibextid=wwXIfr" target="_blank" class="social-icon-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/@AjaytheDJ254" target="_blank" class="social-icon-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://soundcloud.com/ajay-the-dj-722866087" target="_blank" class="social-icon-link">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <div class="cart-icon" id="cartNavIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCountBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Merch Hero Section -->
+    <section class="merch-hero" style="display: none;">
+        <!-- <h1>MERCH</h1> -->
+        <!-- <p>Rep The Ajay Experience with our exclusive collection</p> -->
+    </section>
+
+    <!-- Coming Soon Message -->
+    <section class="merch-coming-soon" id="merchComingSoon" style="text-align: center; padding: 120px 20px 60px; min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: -50px;">
+        <h2 style="font-size: 4rem; margin-bottom: 20px; color: var(--primary-color);">COMING SOON</h2>
+        <div style="width: 100px; height: 5px; background-color: var(--accent-color); margin-bottom: 30px;"></div>
+        <p style="font-size: 1.2rem;">Want to be notified when our products are available?</p>
+        <button onclick="window.location.href='contact.html'" style="margin-top: 20px; padding: 12px 30px; font-size: 1.1rem; border: none; border-radius: 5px; cursor: pointer; background-color: var(--accent-color); color: var(--primary-color); font-weight: bold;">Join the Experience</button>
+    </section>
+
+    <!-- Merch Grid - Commented out until merchandise is ready -->
+    <!--
+    <section class="merch-grid" id="merchGrid">
+        <!-- Merch items will be dynamically loaded here -->
+    </section>
+    -->
+
+    <!-- Cart Sidebar -->
+    <section id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-content">
+            <div id="cartItems">
+                <!-- Cart items will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="cart.html" class="checkout-button" id="checkoutButton">Checkout</a>
+            <a href="cart.html" class="view-cart-button">View Bag</a>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-product-details">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <p>Item added to bag!</p>
+    </div>
+
+    <!-- Remove any unwanted lightbox or nav elements that might be showing -->
+    <style>
+        /* Hide any elements that might be causing the issue */
+        .lightbox, .lightbox-nav, .lightbox-download, .lightbox-close {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="community.html">Community Guidelines</a>
+                <span class="footer-separator">|</span>
+                <a href="contact.html">Join the Experience</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/theajayexperience/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ajaythedj" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1C5XEqcUQp/?mibextid=wwXIfr" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@AjaytheDJ254" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://soundcloud.com/ajay-the-dj-722866087" target="_blank">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 The Ajay Experience. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Use a custom script instead of the main script.js to avoid loading lightbox functionality -->
+    <script>
+        // Minimal version of script.js without lightbox functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize navbar functionality only
+            const navbar = document.getElementById('navbar');
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', function() {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScroll > lastScrollTop && currentScroll > 100) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+            
+            // Cart icon functionality
+            const cartIcon = document.getElementById('cartNavIcon');
+            const cartSidebar = document.getElementById('cartSidebar');
+            const closeCart = document.getElementById('closeCart');
+            
+            if (cartIcon) {
+                cartIcon.addEventListener('click', function() {
+                    cartSidebar.classList.add('open');
+                });
+            }
+            
+            if (closeCart) {
+                closeCart.addEventListener('click', function() {
+                    cartSidebar.classList.remove('open');
+                });
+            }
+        });
+    </script>
+    <script src="../cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear any existing cart data when merch is not available
+            localStorage.removeItem('cart');
+            
+            // Keep cart icon visible for consistency across pages
+            // const cartNavIcon = document.getElementById('cartNavIcon');
+            // if (cartNavIcon) {
+            //     cartNavIcon.style.display = 'none';
+            // }
+            
+            // Make sure any potentially leftover lightbox elements are removed
+            const lightboxElements = document.querySelectorAll('.lightbox, .lightbox-nav, .lightbox-download');
+            lightboxElements.forEach(el => {
+                if (el) el.remove();
+            });
+            
+            // Ensure that any elements with lightbox or gallery related styles are removed
+            // This specifically targets the elements that appear to be showing in the screenshot
+            const elementsToCheck = document.querySelectorAll(
+                '.lightbox-nav button, .lightbox-download, .lightbox img, .lightbox-close'
+            );
+            elementsToCheck.forEach(el => {
+                if (el) el.remove();
+            });
+            
+            // Disable any event listeners that might be coming from script.js for lightbox functionality
+            window.openLightbox = function() { return false; };
+            window.closeLightbox = function() { return false; };
+            window.updateLightboxImage = function() { return false; };
+            
+            /* Commented out merchandise code - will be uncommented when merch is ready
+            // Sample merchandise data - replace this with your actual products
+            const merchItems = [
+                {
+                    id: 1,
+                    name: "Purple & Gold T-Shirt",
+                    description: "Classic Ajay Experience T-shirt in premium cotton",
+                    price: 29.99,
+                    image: "public/images/merch/tshirt.jpg",
+                    colors: ["Purple & Gold", "Black & Gold"]
+                },
+                {
+                    id: 2,
+                    name: "Ajay Experience Hoodie",
+                    description: "Stay cozy with our premium quality hoodie",
+                    price: 49.99,
+                    image: "public/images/merch/hoodie.jpg",
+                    colors: ["Purple", "Black"]
+                },
+                {
+                    id: 3,
+                    name: "Logo Cap",
+                    description: "Adjustable cap with embroidered Ajay Experience logo",
+                    price: 24.99,
+                    image: "public/images/merch/cap.jpg",
+                    colors: ["Black & Gold"]
+                },
+                {
+                    id: 4,
+                    name: "Wristbands",
+                    description: "Set of two silicone wristbands with AE logo",
+                    price: 9.99,
+                    image: "public/images/merch/wristband.jpg",
+                    colors: ["Purple & Gold"]
+                }
+            ];
+
+            const merchGrid = document.getElementById('merchGrid');
+            
+            // Function to render merchandise items
+            function renderMerchItems() {
+                merchItems.forEach(item => {
+                    const merchCard = document.createElement('div');
+                    merchCard.className = 'merch-card';
+                    
+                    merchCard.innerHTML = `
+                        <div class="merch-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="merch-content">
+                            <h2>${item.name}</h2>
+                            <p>${item.description}</p>
+                            <div class="merch-price">$${item.price.toFixed(2)}</div>
+                            <button class="add-to-cart-btn" data-id="${item.id}">Add to Bag</button>
+                        </div>
+                    `;
+                    
+                    merchGrid.appendChild(merchCard);
+                });
+                
+                // Add event listeners to the Add to Cart buttons
+                document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        const product = merchItems.find(item => item.id === productId);
+                        
+                        // Add item to cart (modify as needed based on your cart implementation)
+                        addToCart(product);
+                        
+                        // Show notification
+                        const notification = document.getElementById('notification');
+                        notification.classList.add('show');
+                        setTimeout(() => {
+                            notification.classList.remove('show');
+                        }, 3000);
+                    });
+                });
+            }
+            
+            // Function to add item to cart (simplified - adjust based on your actual cart implementation)
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                const existingItemIndex = cart.findIndex(item => item.id === product.id);
+                
+                if (existingItemIndex > -1) {
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        quantity: 1
+                    });
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+            }
+            
+            // Update cart count badge
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                
+                const cartCountBadge = document.getElementById('cartCountBadge');
+                if (cartCountBadge) {
+                    cartCountBadge.textContent = count;
+                    cartCountBadge.style.display = count > 0 ? 'flex' : 'none';
+                }
+            }
+            
+            // Initialize
+            renderMerchItems();
+            updateCartCount();
+            */
+        });
+    </script>
+</body>
+</html> 
